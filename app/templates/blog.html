@@ -10,7 +10,7 @@
 
 <div class="container mt-5">
     <h1 class="mb-4">Домашнее задание</h1>
-    <h1 class="mb-4">Анкета пользователя</h1>
+    <h2 class="mb-4">Анкета пользователя</h2>
 
     <form method="POST" action="/" class="mb-5">
         <div class="form-group">
@@ -29,21 +29,19 @@
             <label for="userage">Возраст</label>
             <input type="text" class="form-control" id="userage" name="userage" required>
         </div>
-
-
-
         <button type="submit" class="btn btn-primary">Вывести данные</button>
     </form>
     <hr>
 
-    <h2 class="mb-4">Вывод данных</h2>
+    <h1 class="mb-4">Вывод данных</h1>
     <div class="list-group">
-        {% for post in posts %}
         <div class="list-group-item mb-3">
-            <h4 class="mb-2">{{ post.title }}</h4>
-            <p>{{ post.content }}</p>
+            <h2>Ваши данные:</h2><br>
+            <p>Имя: {{username}}</p>
+            <p>Город: {{usercity}}</p>
+            <p>Хобби: {{userhobby}}</p>
+             <p>Возраст: {{userage}}</p>
         </div>
-        {% endfor %}
     </div>
 </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
